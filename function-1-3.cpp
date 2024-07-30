@@ -9,7 +9,7 @@ void count_digits(int array[4][4]) {
             count[array[i][j]]++;
         }
     }
-    for (int i = 1; i < 9; i++) {
+    for (int i = 0; i < 10; i++) {
         cout << i << ":" << count[i] << ";";
     }
     cout << "\n";
