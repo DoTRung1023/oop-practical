@@ -1,13 +1,16 @@
 #include <iostream>
 
-extern int array_sum(int array[], int n);
+extern int sum_diagonal(int array[4][4]);
 
 using namespace std;
 
 int main() {
-    int numbers[6] = {2, 7, 8, 9, 10, 0};
+    int array[4][4] = {{2, 7, 8, 9},
+                      {3, 5, 7, 5},
+                      {6, 4, 1, 0},
+                      {1, 9, 4, 2}};
 
-    cout << "The sum is: " << array_sum(numbers, 6) << endl;
+    cout << "The diagonal sum is: " << sum_diagonal(array) << endl;
 
     return 0;
 }
