@@ -1,13 +1,30 @@
 #include <iostream>
 
-extern double array_mean(int array[], int n);
+extern int is_identity(int array[10][10]);
 
 using namespace std;
 
 int main() {
-    int numbers[6] = {2, 7, 8, 9, 10, 1};
+    int array[10][10];
+    // identity matrix
+    // for (int i = 0; i<10; i++) {
+    //     for (int j = 0; j<10; j++) {
+    //         if (i==j) {
+    //             array[i][j] = 1;
+    //         }
+    //         else {
+    //             array[i][j] = 0;
+    //         }
+    //     }
+    // }
+    // not identity
+    for (int i = 0; i<10; i++) {
+        for (int j = 0; j<10; j++) {
+            array[i][j] = i+j;
+        }
+    }
 
-    cout << "The mean is: " << array_mean(numbers, 6) << endl;
+    cout << is_identity(array) << endl;
 
     return 0;
 }

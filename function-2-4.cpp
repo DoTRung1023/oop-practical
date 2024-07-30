@@ -2,14 +2,31 @@
 
 using namespace std;
 
-bool is_ascending(int array[], int n) {
-    if (n > 0) {
-        for (int i = 0; i < n-1; i++) {
-            if (array[i] > array[i+1]) {
-                return false;
-            }
+int array_min(int integers[], int length) {
+    int min = integers[0];
+    for (int i = 1; i<length; i++) {
+        if (integers[i] < min) {
+            min = integers[i];
         }
-        return true;
     }
-    return false;
+    return min;
+}
+
+int array_max(int integers[], int length) {
+    int max = integers[0];
+    for (int i = 1; i<length; i++) {
+        if (integers[i] > max) {
+            max = integers[i];
+        }
+    }
+    return max;
+}
+
+int sum_min_max(int integers[], int length) { 
+    if (length <= 0) {
+        return -1;
+    }
+    int max = array_max(integers, length);
+    int min = array_min(integers, length);
+    return max + min;
 }

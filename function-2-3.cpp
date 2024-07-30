@@ -2,23 +2,34 @@
 
 using namespace std;
 
-void two_five_nine(int array[], int n) {
-    int num_twos = 0;
-    int num_fives = 0;
-    int num_nines = 0;
-    for (int i = 0; i < n; i++) {
-        switch (array[i]) {
-            case 2:
-                num_twos++;
-                break;
-            case 5:
-                num_fives++;
-                break;
-            case 9:
-                num_nines++;
-                break;
+bool is_palindrome(int integers[], int length) {
+    if (length <= 0) {
+        return false;
+    }
+    else {
+        for (int i = 0; i<length/2; i++) {
+            if (integers[i] != integers[length-1-i]) {
+                return false;
+            }
         }
     }
-    cout << "2:" << num_twos << ";5:" << num_fives << ";9:" << num_nines << ";" << endl;
-    
+    return true;
+}
+
+int sum_array_elements(int integers[], int length) {
+    int sum = 0;
+    for (int i = 0; i<length; i++) {
+        sum += integers[i];
+    }
+    return sum;
+}
+
+int sum_if_palindrome(int integers[], int length) {
+    if (length <= 0) {
+        return -1;
+    }
+    else if (is_palindrome(integers, length) == false) {
+        return -2;
+    }
+    return sum_array_elements(integers, length);
 }

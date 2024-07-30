@@ -1,13 +1,17 @@
 #include <iostream>
+#include <string>
 
-extern int min_element(int array[], int n);
+extern void print_binary_str(std::string decimal_number);
 
 using namespace std;
 
 int main() {
-    int numbers[9] = {3, 18, 25, 67, 33, 8, 9, 7, 24};
+    string decimal_number;
 
-    cout << "The min is: " << min_element(numbers, 9) << endl;
+    cout << "Enter a number: ";
+    cin >> decimal_number;
+
+    print_binary_str(decimal_number);
 
     return 0;
 }

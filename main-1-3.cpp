@@ -1,13 +1,16 @@
 #include <iostream>
 
-extern int num_count(int array[], int n, int number);
+extern void count_digits(int array[4][4]);
 
 using namespace std;
 
 int main() {
-    int numbers[6] = {2, 7, 8, 9, 10, 1};
+    int array[4][4] = {{2, 7, 8, 9},
+                      {3, 5, 7, 5},
+                      {6, 4, 1, 0},
+                      {1, 9, 4, 2}};
 
-    cout << "The number of numbers is: " << num_count(numbers, 6, 1) << endl;
+    count_digits(array);
 
     return 0;
 }

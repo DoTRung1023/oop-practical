@@ -1,13 +1,12 @@
 #include <iostream>
+#include <cmath>
 
-int max_element(int array[], int n) {
-    if (n < 1) return 0;
-    int max = array[0];
-    for (int i = 1; i < n; i++) {
-        if (array[i] > max) {
-            max = array[i];
-        }
+using namespace std;
+
+int binary_to_int(int binary_digits[], int number_of_digits) {
+    int decimal_num = 0;
+    for (int i = 0; i<number_of_digits; i++) {
+        decimal_num += pow(2, number_of_digits-1-i)*binary_digits[i];
     }
-
-    return max;
+    return decimal_num;
 }

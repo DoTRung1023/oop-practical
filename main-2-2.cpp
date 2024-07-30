@@ -1,13 +1,25 @@
 #include <iostream>
 
-extern int max_element(int array[], int n);
+extern int binary_to_int(int binary_digits[], int number_of_digits);
 
 using namespace std;
 
 int main() {
-    int numbers[9] = {3, 18, 25, 67, 33, 8, 9, 7, 24};
+    int number_of_digits;
 
-    cout << "The max is: " << max_element(numbers, 9) << endl;
+    cout << "Enter length of the binary: ";
+    cin >> number_of_digits;
+
+    int* binary_digits = new int[number_of_digits];
+
+    for (int i = 0; i<number_of_digits; i++) {
+        cout << "Enter #" << i+1 <<" number: ";
+        cin >> binary_digits[i];
+    }
+
+    cout << binary_to_int(binary_digits, number_of_digits) << endl;
+
+    delete[] binary_digits;
 
     return 0;
 }

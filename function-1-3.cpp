@@ -1,13 +1,16 @@
 #include <iostream>
 
-int num_count(int array[], int n, int number) {
-    if (n < 1) return 0;
-    int count = 0;
-    for (int i = 0; i < n; i++) {
-        if (number == array[i]) {
-            count++;
+using namespace std;
+
+void count_digits(int array[4][4]) {
+    int count[9] = {0};
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4; j++) {
+            count[array[i][j]-1]++;
         }
     }
-
-    return count;
+    for (int i = 0; i < 9; i++) {
+        cout << i+1 << ":" << count[i] << ";";
+    }
+    cout << "\n";
 }

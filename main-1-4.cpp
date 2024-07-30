@@ -1,14 +1,16 @@
 #include <iostream>
 
-extern int sum_two_arrays(int array[], int secondarray[], int n);
+extern void print_scaled(int array[3][3],int scale);
 
 using namespace std;
 
 int main() {
-    int numbers1[6] = {2, 7, 8, 9, 10, 1};
-    int numbers2[6] = {5, 9, 11, 67, 3, 8};
+    int array[3][3] = {{2, 7, 8},
+                      {3, 5, 7},
+                      {4, 6, 0}};
+    int scale = 4;
 
-    cout << "The sum is: " << sum_two_arrays(numbers1, numbers2, 6) << endl;
+    print_scaled(array, scale);
 
     return 0;
 }

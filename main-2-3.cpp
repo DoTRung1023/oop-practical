@@ -1,14 +1,28 @@
 #include <iostream>
 
-extern void two_five_nine(int array[], int n);
+extern int sum_if_palindrome(int integers[], int length);
 
 using namespace std;
 
 int main() {
-    int numbers[26] = {2, 6, 5, 9, 4, 7, 8, 3, 4, 9, 6, 2, 3, 6, 2, 5, 8, 9, 0, 1, 8, 2, 3, 5, 6, 8};
-    // int numbers[4] = {2, 5, 9, 9};
+    int length;
 
-    two_five_nine(numbers, 26);
+    cout << "Enter length of the array: ";
+    cin >> length;
+
+    if (length < 0) {
+        length = 0;
+    }
+    int* integers = new int[length];
+
+    for (int i = 0; i<length; i++) {
+        cout << "Enter #" << i+1 << " number: ";
+        cin >> integers[i];
+    }
+
+    cout << "The sum is: " << sum_if_palindrome(integers, length) << endl;
+
+    delete[] integers;
 
     return 0;
 }
