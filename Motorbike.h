@@ -13,7 +13,7 @@ class Motorbike: public Vehicle
 private:
 public:
     Motorbike(int ID):Vehicle(ID){};
-    double getParkingDuration();
+    int getParkingDuration();
 };
 
 #endif

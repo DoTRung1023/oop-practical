@@ -26,6 +26,6 @@ time_t Vehicle::getTime(){
     return timeOfEntry;
 }
 
-double Vehicle::getParkingDuration() {
+int Vehicle::getParkingDuration() {
     return std::time(nullptr)-getTime();
 }

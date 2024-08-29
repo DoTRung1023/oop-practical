@@ -44,7 +44,7 @@ void ParkingLot::parkVehicle(Vehicle* vehicle) {
 void ParkingLot::unparkVehicle(int ID) {
     int found = 0;
     for (int i = 0; i<currentNum; i++) {
-        if(vehicles[i]->get_ID() == ID) {
+        if(vehicles[i] != nullptr && vehicles[i]->get_ID() == ID) {
             vehicles[i] = nullptr;
             found = 1;
             break;

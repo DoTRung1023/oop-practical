@@ -6,6 +6,6 @@
 
 using namespace std;
 
-double Bus::getParkingDuration(){
-    return difftime(std::time(nullptr), getTime())*0.75;
+int Bus::getParkingDuration(){
+    return (std::time(nullptr) - getTime())*0.75;
 }

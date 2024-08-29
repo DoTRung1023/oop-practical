@@ -18,7 +18,7 @@ public:
     void set_ID(int ID);
     int get_ID();
     time_t getTime();
-    virtual double getParkingDuration();
+    virtual int getParkingDuration();
 };
 
 #endif

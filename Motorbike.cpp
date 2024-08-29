@@ -6,6 +6,6 @@
 
 using namespace std;
 
-double Motorbike::getParkingDuration(){
-    return difftime(std::time(nullptr), getTime())*0.85;
+int Motorbike::getParkingDuration(){
+    return (std::time(nullptr)- getTime())*0.85;
 }
