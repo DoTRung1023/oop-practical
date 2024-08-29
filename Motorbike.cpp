@@ -17,5 +17,5 @@ Motorbike::Motorbike(int ID){
 }
 
 double Motorbike::getParkingDuration(){
-    return (std::time(nullptr) - timeOfEntry)*reduction;
+    return (std::time(NULL) - timeOfEntry)*reduction;
 }

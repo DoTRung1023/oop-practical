@@ -10,9 +10,12 @@
 using namespace std;
 
 int main(){
-    ParkingLot arrayParkinglot(10);
+    int parkNum;
+    cout << "Enter number of vehicle parked: ";
+    cin >> parkNum;
+    ParkingLot arrayParkinglot(parkNum);
 
-    for(int i = 0; i<11; i++) {
+    for(int i = 0; i<parkNum; i++) {
         string typeVehicle;
         int inputID;
 

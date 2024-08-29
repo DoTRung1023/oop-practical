@@ -17,5 +17,5 @@ Car::Car(int ID){
 }
 
 double Car::getParkingDuration(){
-    return (std::time(nullptr) - timeOfEntry)*reduction;
+    return (std::time(NULL) - timeOfEntry)*reduction;
 }

@@ -17,5 +17,5 @@ Bus::Bus(int ID){
 }
 
 double Bus::getParkingDuration(){
-    return (std::time(nullptr) - timeOfEntry)*reduction;
+    return (std::time(NULL) - timeOfEntry)*reduction;
 }
