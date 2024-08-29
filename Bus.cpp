@@ -7,5 +7,5 @@
 using namespace std;
 
 double Bus::getParkingDuration(){
-    return (std::time(nullptr) - getTime())*0.75;
+    return difftime(std::time(nullptr), getTime())*0.75;
 }

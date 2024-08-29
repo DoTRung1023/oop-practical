@@ -7,5 +7,5 @@
 using namespace std;
 
 double Motorbike::getParkingDuration(){
-    return (std::time(0) - getTime())*0.85;
+    return difftime(std::time(nullptr), getTime())*0.85;
 }
