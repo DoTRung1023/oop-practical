@@ -44,8 +44,8 @@ void ParkingLot::parkVehicle(Vehicle* vehicle) {
 void ParkingLot::unparkVehicle(int ID) {
     int found = 0;
     for (int i = 0; i<currentNum; i++) {
-        if(vehicles[i] != nullptr && vehicles[i]->get_ID() == ID) {
-            vehicles[i] = nullptr;
+        if(vehicles[i]->get_ID() == ID) {
+            delete vehicles[i];
             found = 1;
             break;
         }
@@ -66,8 +66,8 @@ int ParkingLot::countOverstayingVehicles(int maxParkingDuration){
 }
 
 ParkingLot::~ParkingLot(){
-    for(int i = 0; i<currentNum; i++) {
-        delete vehicles[i];
-    }
+    // for(int i = 0; i<currentNum; i++) {
+    //     delete vehicles[i];
+    // }
     delete vehicles;
 }
