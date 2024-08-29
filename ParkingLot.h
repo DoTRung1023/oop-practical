@@ -1,3 +1,5 @@
+#ifndef PARKINGLOT_H
+#define PARKINGLOT_H
 #include <iostream>
 #include <string>
 #include "Vehicle.h"
@@ -7,8 +9,6 @@
 
 using namespace std;
 
-#ifndef PARKINGLOT_H
-#define PARKINGLOT_H
 
 class ParkingLot
 {
