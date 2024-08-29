@@ -10,7 +10,7 @@
 using namespace std;
 
 int main(){
-    Parkinglot arrayParkinglot(10);
+    ParkingLot arrayParkinglot(10);
 
     for(int i = 0; i<10; i++) {
         string typeVehicle;

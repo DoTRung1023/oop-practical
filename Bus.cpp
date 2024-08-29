@@ -7,12 +7,12 @@
 using namespace std;
 
 Bus::Bus(){
-    Vehicle(0);
+    ID = 0;
     reduction = 0.25;
 }
 
 Bus::Bus(int ID){
-    Vehicle(ID);
+    this->ID = ID;
     reduction = 0.25;
 }
 

@@ -10,15 +10,15 @@ using namespace std;
 #ifndef PARKINGLOT_H
 #define PARKINGLOT_H
 
-class Parkinglot
+class ParkingLot
 {
 private:
     int maxVehicle;
     int currentNum;
     Vehicle** vehicles;
 public:
-    Parkinglot();
-    Parkinglot(int maxVehicle);
+    ParkingLot();
+    ParkingLot(int maxVehicle);
 
     int getCount();
     int getMaxVehicle();
@@ -31,7 +31,7 @@ public:
 
     int countOverstayingVehicles(int maxParkingDuration);
 
-    ~Parkinglot();
+    ~ParkingLot();
 };
 
 #endif

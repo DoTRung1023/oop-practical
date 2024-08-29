@@ -8,30 +8,30 @@
 
 using namespace std;
 
-Parkinglot::Parkinglot() {
+ParkingLot::ParkingLot() {
     maxVehicle = 0;
     currentNum = 0;
     vehicles = new Vehicle*[maxVehicle];
 }
-Parkinglot::Parkinglot(int maxVehicle){
+ParkingLot::ParkingLot(int maxVehicle){
     this->maxVehicle = maxVehicle;
     currentNum = 0;
     vehicles = new Vehicle*[maxVehicle];
 }
 
-int Parkinglot::getCount(){
+int ParkingLot::getCount(){
     return currentNum;
 }
 
-int Parkinglot::getMaxVehicle() {
+int ParkingLot::getMaxVehicle() {
     return maxVehicle;
 }
 
-void Parkinglot::setMaxVehicle(int maxVehicle) {
+void ParkingLot::setMaxVehicle(int maxVehicle) {
     this->maxVehicle = maxVehicle;
 }
 
-void Parkinglot::parkVehicle(Vehicle* vehicle) {
+void ParkingLot::parkVehicle(Vehicle* vehicle) {
     if (currentNum < maxVehicle) {
         vehicles[currentNum] = vehicle;
         currentNum++;
@@ -41,7 +41,7 @@ void Parkinglot::parkVehicle(Vehicle* vehicle) {
     }
 }
 
-void Parkinglot::unparkVehicle(int ID) {
+void ParkingLot::unparkVehicle(int ID) {
     int found = 0;
     for (int i = 0; i<currentNum; i++) {
         if(vehicles[i]->get_ID() == ID) {
@@ -55,7 +55,7 @@ void Parkinglot::unparkVehicle(int ID) {
     }
 }
 
-int Parkinglot::countOverstayingVehicles(int maxParkingDuration){
+int ParkingLot::countOverstayingVehicles(int maxParkingDuration){
     int exceed = 0;
     for(int i = 0; i<currentNum; i++) {
         if(vehicles[i]->getParkingDuration() > maxParkingDuration) {
@@ -65,7 +65,7 @@ int Parkinglot::countOverstayingVehicles(int maxParkingDuration){
     return exceed;
 }
 
-Parkinglot::~Parkinglot(){
+ParkingLot::~ParkingLot(){
     for(int i = 0; i<currentNum; i++) {
         delete vehicles[i];
     }

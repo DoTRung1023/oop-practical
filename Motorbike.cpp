@@ -7,12 +7,12 @@
 using namespace std;
 
 Motorbike::Motorbike(){
-    Vehicle(0);
+    ID = 0;
     reduction = 0.15;
 }
 
 Motorbike::Motorbike(int ID){
-    Vehicle(ID);
+    this->ID = ID;
     reduction = 0.15;
 }
 

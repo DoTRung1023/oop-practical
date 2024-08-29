@@ -9,9 +9,8 @@ using namespace std;
 
 class Vehicle
 {
-private:
-    int ID;
 protected:
+    int ID;
     std::time_t timeOfEntry;
 public:
     Vehicle();

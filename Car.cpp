@@ -7,12 +7,12 @@
 using namespace std;
 
 Car::Car(){
-    Vehicle(0);
+    ID = 0;
     reduction = 0.1;
 }
 
 Car::Car(int ID){
-    Vehicle(ID);
+    this->ID = ID;
     reduction = 0.1;
 }
 
