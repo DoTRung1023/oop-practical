@@ -22,6 +22,10 @@ int Vehicle::get_ID(){
     return ID;
 }
 
+time_t Vehicle::getTime(){
+    return timeOfEntry;
+}
+
 double Vehicle::getParkingDuration() {
-    return std::time(nullptr)-timeOfEntry;
+    return std::time(0)-getTime();
 }

@@ -6,16 +6,6 @@
 
 using namespace std;
 
-Motorbike::Motorbike(){
-    ID = 0;
-    reduction = 0.15;
-}
-
-Motorbike::Motorbike(int ID){
-    this->ID = ID;
-    reduction = 0.15;
-}
-
 double Motorbike::getParkingDuration(){
-    return (std::time(NULL) - timeOfEntry)*reduction;
+    return (std::time(0) - timeOfEntry)*reduction;
 }

@@ -11,10 +11,9 @@ using namespace std;
 class Motorbike: public Vehicle
 {
 private:
-    double reduction;
+    double reduction = 0.15;
 public:
-    Motorbike();
-    Motorbike(int ID);
+    Motorbike(int ID):Vehicle(ID){};
     double getParkingDuration();
 };
 

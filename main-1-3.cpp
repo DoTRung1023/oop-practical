@@ -23,17 +23,17 @@ int main(){
         cin >> inputID;
 
         if(typeVehicle == "car") {
-            Vehicle* parkVehicle = new Car;
+            Vehicle* parkVehicle = new Car(inputID);
             parkVehicle->set_ID(inputID);
             arrayParkinglot.parkVehicle(parkVehicle);
         }
         else if(typeVehicle == "bus") {
-            Vehicle* parkVehicle = new Bus;
+            Vehicle* parkVehicle = new Bus(inputID);
             parkVehicle->set_ID(inputID);
             arrayParkinglot.parkVehicle(parkVehicle);
         }
         else if(typeVehicle == "motorbike") {
-            Vehicle* parkVehicle = new Motorbike;
+            Vehicle* parkVehicle = new Motorbike(inputID);
             parkVehicle->set_ID(inputID);
             arrayParkinglot.parkVehicle(parkVehicle);
         }

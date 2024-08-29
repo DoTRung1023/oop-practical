@@ -13,8 +13,7 @@ class Bus: public Vehicle
 private:
     double reduction;
 public:
-    Bus();
-    Bus(int ID);
+    Bus(int ID):Vehicle(ID){};
     double getParkingDuration();
 };
 

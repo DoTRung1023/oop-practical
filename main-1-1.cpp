@@ -27,15 +27,14 @@ int main(){
         cin >> inputID;
 
         if(typeVehicle == "car") {
-            v[i] = new Car;
+            v[i] = new Car(inputID);
         }
         else if(typeVehicle == "bus") {
-            v[i] = new Bus;
+            v[i] = new Bus(inputID);
         }
         else if(typeVehicle == "motorbike") {
-            v[i] = new Motorbike;
+            v[i] = new Motorbike(inputID);
         }
-        v[i]->set_ID(inputID);
     }
 
     for(int i = 0; i<totalVehicle; i++) {

@@ -17,6 +17,7 @@ public:
     Vehicle(int ID);
     void set_ID(int ID);
     int get_ID();
+    time_t getTime();
     double virtual getParkingDuration();
 };
 
