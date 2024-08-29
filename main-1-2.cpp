@@ -11,7 +11,7 @@ using namespace std;
 
 int main(){
     int parkNum = 0;
-    cout << "Number of vehicle parked: ";
+    cout << "Number of vehicles parked: ";
     cin >> parkNum;
     ParkingLot arrayParkinglot(parkNum);
 
