@@ -10,7 +10,9 @@
 using namespace std;
 
 int main(){
-    int parkNum = 10;
+    int parkNum = 0;
+    cout << "Number of vehicle parked: ";
+    cin >> parkNum;
     ParkingLot arrayParkinglot(parkNum);
 
     for(int i = 0; i<parkNum; i++) {
