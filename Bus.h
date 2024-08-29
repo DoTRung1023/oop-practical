@@ -11,7 +11,6 @@ using namespace std;
 class Bus: public Vehicle
 {
 private:
-    double reduction = 0.25;
 public:
     Bus(int ID):Vehicle(ID){};
     double getParkingDuration();

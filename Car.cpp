@@ -7,5 +7,5 @@
 using namespace std;
 
 double Car::getParkingDuration(){
-    return (std::time(0) - getTime())*(1-reduction);
+    return (std::time(0) - getTime())*0.9;
 }
