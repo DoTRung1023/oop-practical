@@ -10,9 +10,7 @@
 using namespace std;
 
 int main(){
-    int parkNum;
-    cout << "Enter number of vehicle parked: ";
-    cin >> parkNum;
+    int parkNum = 10;
     ParkingLot arrayParkinglot(parkNum);
 
     for(int i = 0; i<parkNum; i++) {
@@ -41,16 +39,16 @@ int main(){
             arrayParkinglot.parkVehicle(parkVehicle);
         }
     }
-    int unparkNum = 0;
-    cout << "Enter number of vehicles you want to unpark: ";
-    cin >> unparkNum;
+    // int unparkNum = 1;
+    // cout << "Enter number of vehicles you want to unpark: ";
+    // cin >> unparkNum;
 
-    for(int i = 0; i<unparkNum; i++) {
+    // for(int i = 0; i<unparkNum; i++) {
         int unparkID;
         cout << "Enter ID of a vehicle to unpark: ";
         cin >> unparkID;
         arrayParkinglot.unparkVehicle(unparkID);
-    }
+    // }
 
     return 0;
 }
