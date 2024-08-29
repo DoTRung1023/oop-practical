@@ -7,5 +7,5 @@
 using namespace std;
 
 double Bus::getParkingDuration(){
-    return (std::time(0) - timeOfEntry)*reduction;
+    return (std::time(0) - getTime())*reduction;
 }
